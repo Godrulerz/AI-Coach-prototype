@@ -1,0 +1,426 @@
+/* Main styles for AI Coaching Agent */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #e1e4e8;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #2c3e50;
+    font-size: 28px;
+}
+
+.coaching-style-selector {
+    display: flex;
+    align-items: center;
+}
+
+.coaching-style-selector label {
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.coaching-style-selector select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+}
+
+/* Main content layout */
+main {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+}
+
+/* Chat container styles */
+.chat-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.message {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message.user {
+    align-items: flex-end;
+}
+
+.message.coach {
+    align-items: flex-start;
+}
+
+.message-content {
+    padding: 12px 16px;
+    border-radius: 18px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.message.user .message-content {
+    background-color: #3498db;
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.message.coach .message-content {
+    background-color: #f1f1f1;
+    color: #333;
+    border-bottom-left-radius: 4px;
+}
+
+.chat-input {
+    padding: 15px;
+    border-top: 1px solid #e1e4e8;
+}
+
+.chat-input form {
+    display: flex;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 24px;
+    font-size: 14px;
+}
+
+.chat-input button {
+    margin-left: 10px;
+    padding: 0 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.chat-input button:hover {
+    background-color: #2980b9;
+}
+
+/* Sidebar styles */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Performance metrics styles */
+.performance-section {
+    margin-bottom: 20px;
+}
+
+.metrics-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.metrics-table th,
+.metrics-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.metrics-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* Rating visual styles */
+.rating-visual {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.rating-star {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+}
+
+.rating-star.filled {
+    background-color: #4CAF50;
+}
+
+.goals-section,
+.insights-section,
+.safety-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    border-bottom: 1px solid #e1e4e8;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.sidebar li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.sidebar li:last-child {
+    border-bottom: none;
+}
+
+/* Goal progress styling */
+.goal-text {
+    margin-bottom: 5px;
+}
+
+.goal-progress {
+    display: flex;
+    align-items: center;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #3498db;
+    border-radius: 4px;
+}
+
+.progress-text {
+    font-size: 12px;
+    color: #666;
+    min-width: 35px;
+}
+
+.empty-list-message {
+    color: #999;
+    font-style: italic;
+}
+
+#add-goal-form {
+    display: flex;
+}
+
+#add-goal-form input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#add-goal-form button {
+    margin-left: 10px;
+    padding: 0 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+#add-goal-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Safety section styles */
+.safety-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+}
+
+.safety-icon {
+    font-size: 20px;
+}
+
+.safety-text {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.safety-details {
+    margin-top: 15px;
+}
+
+.safety-details.hidden {
+    display: none;
+}
+
+.safety-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.stat-label {
+    color: #666;
+}
+
+.stat-value {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.safety-recommendations {
+    margin-top: 15px;
+}
+
+.safety-recommendations h4 {
+    font-size: 14px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.safety-recommendations ul {
+    list-style: none;
+    margin: 0;
+}
+
+.safety-recommendations li {
+    padding: 6px 0;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.safety-recommendations li:last-child {
+    border-bottom: none;
+}
+
+.toggle-button {
+    width: 100%;
+    padding: 8px 12px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.2s;
+}
+
+.toggle-button:hover {
+    background-color: #5a6268;
+}
+
+/* Safety alert levels */
+.safety-indicator.warning {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+}
+
+.safety-indicator.critical {
+    background-color: #f8d7da;
+    border-left: 4px solid #dc3545;
+}
+
+.safety-indicator.emergency {
+    background-color: #f8d7da;
+    border-left: 4px solid #dc3545;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    
+    .chat-container {
+        height: 50vh;
+    }
+    
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .coaching-style-selector {
+        margin-top: 10px;
+    }
+}

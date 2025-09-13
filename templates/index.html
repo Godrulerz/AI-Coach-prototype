@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Coaching Agent</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Coaching Agent</h1>
+            <div class="coaching-style-selector">
+                <label for="coaching-style">Coaching Style:</label>
+                <select id="coaching-style">
+                    <option value="supportive">Supportive</option>
+                    <option value="challenging">Challenging</option>
+                    <option value="analytical">Analytical</option>
+                </select>
+            </div>
+        </header>
+        
+        <main>
+            <div class="chat-container">
+                <div id="chat-messages" class="chat-messages">
+                    <div class="message coach">
+                        <div class="message-content">
+                            Hello! I'm your AI coach. How can I help you today?
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input">
+                    <form id="message-form">
+                        <input type="text" id="user-message" placeholder="Type your message here..." autocomplete="off">
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="sidebar">
+                <div class="goals-section">
+                    <h2>Your Goals</h2>
+                    <ul id="goals-list">
+                        <li class="empty-list-message">No goals set yet</li>
+                    </ul>
+                    <form id="add-goal-form">
+                        <input type="text" id="new-goal" placeholder="Add a new goal...">
+                        <button type="submit">Add</button>
+                    </form>
+                </div>
+                
+                <div class="performance-section">
+                    <h2>Performance Metrics</h2>
+                    <div id="performance-metrics">
+                        <p class="empty-list-message">No metrics recorded yet</p>
+                    </div>
+                    <div id="mental-state">
+                        <h3>Mental State</h3>
+                        <div id="mental-state-metrics">
+                            <p class="empty-list-message">No mental state data yet</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="insights-section">
+                    <h2>Coaching Insights</h2>
+                    <ul id="insights-list">
+                        <li class="empty-list-message">No insights yet</li>
+                    </ul>
+                </div>
+                
+                <div class="safety-section">
+                    <h2>Safety Status</h2>
+                    <div id="safety-status">
+                        <div class="safety-indicator" id="safety-indicator">
+                            <span class="safety-icon">🟢</span>
+                            <span class="safety-text">All Clear</span>
+                        </div>
+                        <div id="safety-details" class="safety-details hidden">
+                            <div class="safety-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Total Alerts:</span>
+                                    <span class="stat-value" id="total-alerts">0</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Recent Alerts:</span>
+                                    <span class="stat-value" id="recent-alerts">0</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Critical Alerts:</span>
+                                    <span class="stat-value" id="critical-alerts">0</span>
+                                </div>
+                            </div>
+                            <div class="safety-recommendations" id="safety-recommendations">
+                                <h4>Recommendations:</h4>
+                                <ul id="recommendations-list">
+                                    <li class="empty-list-message">No recommendations</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button id="toggle-safety-details" class="toggle-button">Show Details</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
