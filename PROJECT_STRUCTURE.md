@@ -7,29 +7,29 @@ This is a comprehensive AI-powered coaching chatbot built with Flask and OpenAI 
 
 ```
 chatbot/
-├── .gitignore                 # Git ignore rules
-├── .env                      # Environment variables (not in repo)
-├── app.py                    # Main Flask application
-├── config.py                 # Configuration management
-├── setup.py                  # Automated setup script
-├── requirements.txt          # Python dependencies
-├── README.md                 # Project documentation
-├── PROJECT_STRUCTURE.md      # This file
-├── coach/                    # Core coaching modules
+├── .gitignore                 
+├── .env
+├── app.py                    
+├── config.py                 
+├── setup.py                  
+├── requirements.txt          
+├── README.md                 
+├── PROJECT_STRUCTURE.md
+├── coach/                    
 │   ├── __init__.py
-│   ├── agent.py              # Main coaching agent
-│   ├── memory.py             # User memory and context management
-│   ├── responses.py          # Response generation with OpenAI
-│   ├── safety.py             # Safety monitoring and alerts
-│   ├── scenarios.py          # General coaching scenarios
-│   └── sports.py             # Sports-specific coaching scenarios
-├── templates/                # HTML templates
-│   └── index.html            # Main chat interface
-└── static/                   # Static assets
+│   ├── agent.py              
+│   ├── memory.py             
+│   ├── responses.py          
+│   ├── safety.py             
+│   ├── scenarios.py          
+│   └── sports.py             
+├── templates/                
+│   └── index.html            
+└── static/                   
     ├── css/
-    │   └── style.css         # Application styling
+    │   └── style.css         
     └── js/
-        └── script.js         # Frontend JavaScript
+        └── script.js         
 ```
 
 ## Key Features

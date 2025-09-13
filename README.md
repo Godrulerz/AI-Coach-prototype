@@ -145,24 +145,29 @@ Automatically adapts to:
 
 ```
 chatbot/
-├── app.py              # Flask application entry point
-├── config.py           # Configuration management
-├── setup.py            # Automated setup script
-├── requirements.txt    # Python dependencies
-├── .env                # Local environment variables
-├── env_template.txt    # Environment template
-├── coach/              # Core coaching logic
-│   ├── agent.py        # Main coaching agent
-│   ├── memory.py       # Memory and context
-│   ├── responses.py    # Response generation
-│   ├── safety.py       # Safety monitoring
-│   ├── scenarios.py    # General coaching scenarios
-│   └── sports.py       # Sports-specific modules
-├── templates/          # HTML templates
-│   └── index.html      # Chat UI
-└── static/             # Static assets
-    ├── css/style.css
-    └── js/script.js
+├── .gitignore                 
+├── .env
+├── app.py                    
+├── config.py                 
+├── setup.py                  
+├── requirements.txt          
+├── README.md                 
+├── PROJECT_STRUCTURE.md
+├── coach/                    
+│   ├── __init__.py
+│   ├── agent.py              
+│   ├── memory.py             
+│   ├── responses.py          
+│   ├── safety.py             
+│   ├── scenarios.py          
+│   └── sports.py             
+├── templates/                
+│   └── index.html            
+└── static/                   
+    ├── css/
+    │   └── style.css         
+    └── js/
+        └── script.js         
 ```
 
 ---
