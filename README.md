@@ -1,60 +1,90 @@
-# AI Coaching Agent
+# 🤖 AI Coaching Agent
 
-A comprehensive AI-powered coaching chatbot that provides personalized coaching through a conversational interface. The system supports multiple coaching styles, sports-specific scenarios, safety monitoring, and advanced memory management.
+<div align="center">
 
-## Features
+![Python](https://img.shields.io/badge/Python-3.7+-blue?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-2.0.1-green?style=for-the-badge&logo=flask&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-GPT--3.5--turbo-orange?style=for-the-badge&logo=openai&logoColor=white)
+![License](https://img.shields.io/badge/License-Educational-purple?style=for-the-badge)
 
-### Core Features
-- **Multi-Style Coaching**: Supportive, Challenging, and Analytical coaching styles
-- **Sports Coaching**: Specialized scenarios for athletic performance and training
-- **Memory Management**: Context-aware conversations with user profile tracking
-- **Safety Monitoring**: Built-in safety checks and escalation protocols
-- **Performance Tracking**: Metrics extraction and progress monitoring
-- **Mental State Analysis**: Confidence, anxiety, focus, and motivation tracking
+*A comprehensive AI-powered coaching chatbot that provides personalized coaching through a conversational interface*
 
-### Technical Features
-- **Flask Web Interface**: Modern, responsive chat interface
-- **OpenAI Integration**: GPT-3.5-turbo powered responses
-- **Environment Configuration**: Secure API key management
-- **Modular Architecture**: Extensible coaching scenarios and responses
-- **Error Handling**: Graceful fallbacks and mock responses
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🚀%20Try%20Now-brightgreen?style=for-the-badge)](http://127.0.0.1:5000)
+[![GitHub](https://img.shields.io/badge/GitHub-View%20Source-black?style=for-the-badge&logo=github)](https://github.com/Godrulerz/AI-Coach-prototype)
 
-## Quick Start
+</div>
 
-### Option 1: Automated Setup
+---
+
+## ✨ Overview
+
+An AI-powered conversational coaching platform designed to deliver personalized guidance across multiple coaching styles and scenarios. The system supports athletic performance, mental readiness, safety monitoring, and advanced memory management for context-aware interactions.
+
+---
+
+## 🚀 Features
+
+### 🎯 Core Capabilities
+
+* 🎭 **Multi-Style Coaching**: Supportive, Challenging, and Analytical approaches
+* ⚽ **Sports-Specific Coaching**: Tailored guidance for training, performance, and recovery
+* 🧠 **Memory Management**: Persistent user profiles with context tracking
+* 🛡️ **Safety Monitoring**: Built-in checks with escalation protocols
+* 📊 **Performance Tracking**: Extracts metrics and monitors progress
+* 🧘 **Mental State Analysis**: Evaluates confidence, anxiety, focus, and motivation
+
+### ⚙️ Technical Features
+
+* 🌐 **Flask Web Interface**: Modern, responsive chat UI
+* 🤖 **OpenAI Integration**: Powered by `gpt-3.5-turbo`
+* 🔐 **Secure Configuration**: Environment-based API key management
+* 🏗️ **Modular Architecture**: Easily extendable coaching modules
+* 🛠️ **Error Handling**: Graceful fallbacks and mock response support
+
+---
+
+## 🚀 Quick Start
+
+### ⚡ Option 1: Automated Setup
+
 ```bash
 python setup.py
 ```
 
-### Option 2: Manual Setup
+### 🔧 Option 2: Manual Setup
 
-1. **Install Dependencies**
+1. **📦 Install dependencies**
+
    ```bash
    pip install -r requirements.txt
    ```
 
-2. **Configure Environment**
+2. **⚙️ Configure environment**
+
    ```bash
    # Copy the template
    copy env_template.txt .env
-   
-   # Edit .env file and add your OpenAI API key
+
+   # Edit .env and add your OpenAI API key
    OPENAI_API_KEY=your_actual_api_key_here
    ```
 
-3. **Run the Application**
+3. **▶️ Run the application**
+
    ```bash
    python app.py
    ```
 
-4. **Access the Application**
-   Open your browser and go to: `http://127.0.0.1:5000`
+4. **🌐 Access in browser**
+   Open: `http://127.0.0.1:5000`
+
+---
 
 ## Configuration
 
 ### Environment Variables
 
-Create a `.env` file with the following variables:
+Create a `.env` file with:
 
 ```env
 # Required
@@ -72,102 +102,149 @@ SAFETY_MONITORING_ENABLED=True
 ### Getting an OpenAI API Key
 
 1. Visit [OpenAI Platform](https://platform.openai.com/api-keys)
-2. Sign in to your account
-3. Create a new API key
-4. Copy the key and paste it in your `.env` file
+2. Sign in and create a new API key
+3. Add the key to your `.env` file
+
+---
 
 ## Usage
 
 ### Basic Chat
-Simply type messages to start a conversation with the AI coach.
 
-### Special Commands
-- `/goals` - View your current goals and progress
-- `/insights` - Show coaching insights about you
-- `/preferences` - List learned preferences
-- `/safety` - Check safety status and recommendations
-- `/help` - Show available commands
+Start typing to interact with the AI coach.
+
+### Commands
+
+* `/goals` – View current goals and progress
+* `/insights` – Display personal coaching insights
+* `/preferences` – List learned preferences
+* `/safety` – Show safety status and recommendations
+* `/help` – List available commands
 
 ### Coaching Styles
-- **Supportive**: Encouraging and positive approach
-- **Challenging**: Pushes you to do better
-- **Analytical**: Data-focused and systematic
 
-### Sports Scenarios
-The system automatically detects sports-related conversations and provides specialized coaching for:
-- Performance analysis
-- Technique development
-- Mental state management
-- Team dynamics
-- Training planning
-- Competition preparation
-- Recovery management
+* **Supportive**: Encouraging and positive
+* **Challenging**: Pushes for higher performance
+* **Analytical**: Data-driven and systematic
+
+### Sports Coaching Scenarios
+
+Automatically adapts to:
+
+* Performance analysis
+* Technique development
+* Mental readiness
+* Team dynamics
+* Training plans
+* Competition preparation
+* Recovery strategies
+
+---
 
 ## Project Structure
 
 ```
 chatbot/
-├── app.py                 # Main Flask application
-├── config.py             # Configuration management
-├── setup.py              # Automated setup script
-├── requirements.txt      # Python dependencies
-├── .env                  # Environment variables (create from template)
-├── env_template.txt      # Environment template
-├── coach/                # Core coaching modules
-│   ├── __init__.py
-│   ├── agent.py          # Main coaching agent
-│   ├── memory.py         # User memory and context
-│   ├── responses.py      # Response generation
-│   ├── safety.py         # Safety monitoring
-│   ├── scenarios.py      # General coaching scenarios
-│   └── sports.py         # Sports-specific scenarios
-├── templates/            # HTML templates
-│   └── index.html        # Main chat interface
-└── static/              # Static assets
-    ├── css/
-    │   └── style.css     # Styling
-    └── js/
-        └── script.js     # Frontend JavaScript
+├── app.py              # Flask application entry point
+├── config.py           # Configuration management
+├── setup.py            # Automated setup script
+├── requirements.txt    # Python dependencies
+├── .env                # Local environment variables
+├── env_template.txt    # Environment template
+├── coach/              # Core coaching logic
+│   ├── agent.py        # Main coaching agent
+│   ├── memory.py       # Memory and context
+│   ├── responses.py    # Response generation
+│   ├── safety.py       # Safety monitoring
+│   ├── scenarios.py    # General coaching scenarios
+│   └── sports.py       # Sports-specific modules
+├── templates/          # HTML templates
+│   └── index.html      # Chat UI
+└── static/             # Static assets
+    ├── css/style.css
+    └── js/script.js
 ```
+
+---
 
 ## Development
 
-### Running in Development Mode
+### Run in Development Mode
+
 ```bash
 export FLASK_ENV=development
 python app.py
 ```
 
-### Testing
-The application includes mock responses when the OpenAI API key is not configured, allowing you to test the interface without API costs.
+### Testing Without API Key
+
+If no OpenAI key is set, the app generates mock responses—allowing testing without incurring API costs.
 
 ### Adding New Scenarios
-1. Add scenario definitions to `coach/scenarios.py` or `coach/sports.py`
-2. Update the identification functions
-3. Add appropriate responses for each coaching style
+
+1. Define scenarios in `coach/scenarios.py` or `coach/sports.py`
+2. Update scenario identification logic
+3. Add responses for each coaching style
+
+---
 
 ## Troubleshooting
 
 ### Common Issues
 
-1. **"Warning: OPENAI_API_KEY environment variable not set"**
-   - Make sure you've created a `.env` file with your API key
-   - Check that the file is in the same directory as `app.py`
+1. **Missing API key**
+
+   * Ensure `.env` exists and contains `OPENAI_API_KEY`
+   * File must be in the project root
 
 2. **Import errors**
-   - Run `pip install -r requirements.txt` to install dependencies
-   - Make sure you're using Python 3.7 or higher
+
+   * Run `pip install -r requirements.txt`
+   * Confirm Python 3.7+
 
 3. **Port already in use**
-   - The application runs on port 5000 by default
-   - Stop other applications using this port or modify the port in `app.py`
+
+   * Default port: `5000`
+   * Stop conflicting processes or change port in `app.py`
 
 ### Getting Help
-- Check the console output for error messages
-- Ensure all dependencies are installed
-- Verify your `.env` file configuration
-- Test with mock responses first (no API key needed)
 
-## License
+* Review console logs for errors
+* Check `.env` configuration
+* Verify dependencies installed
+* Test with mock responses first
 
-This project is for educational and demonstration purposes.# AI-Coach-prototype
+---
+
+---
+
+## 👨‍💻 Developer
+
+<div align="center">
+
+**Developed with ❤️ by [ASHISH KUMAR](https://godz.rf.gd)**
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-🌐%20Visit%20Now-blue?style=for-the-badge)](https://godz.rf.gd)
+[![GitHub](https://img.shields.io/badge/GitHub-@Godrulerz-black?style=for-the-badge&logo=github)](https://github.com/Godrulerz)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/ashish-kumar-godrulerz)
+
+*Full-Stack Developer | AI Enthusiast | Open Source Contributor*
+
+</div>
+
+---
+
+## 📄 License
+
+This project is provided for educational and demonstration purposes only.
+
+---
+
+<div align="center">
+
+**⭐ Star this repository if you found it helpful!**
+
+[![GitHub stars](https://img.shields.io/github/stars/Godrulerz/AI-Coach-prototype?style=social)](https://github.com/Godrulerz/AI-Coach-prototype/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Godrulerz/AI-Coach-prototype?style=social)](https://github.com/Godrulerz/AI-Coach-prototype/network)
+
+</div>
